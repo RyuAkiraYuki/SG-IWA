@@ -1,0 +1,59 @@
+<!--<md-list>
+    <md-list-item class="md-2-line visit-item" ng-repeat="visit in tab.visits | orderBy: 'fromHour'">
+        <div class="md-list-item-text">
+
+            <div layout="row" flex>
+                <div class="md-visitor-hour" layout="column" flex="25">{{visit.fromHour}} AM</div>
+                <div class="md-visitor-costumer-name" layout="column" flex>{{visit.customerName}}</div>
+            </div>
+            <div layout="row" flex>
+                <div class="md-visitor-hour" layout="column" flex="25">{{visit.toHour}} AM</div>
+                <div class="md-visitor-desc" layout="column" flex>{{visit.desciption}}</div>
+            </div>
+        </div>
+    </md-list-item>
+</md-list>-->
+
+<md-grid-list md-cols="12" md-gutter="1px" md-row-height="60" ng-repeat="visit in tab.visits | orderBy: 'fromHour'">
+    <md-grid-tile md-rowspan="1" md-colspan="3"  md-colspan-sm="3" md-colspan-md="5" style="">
+        <!--<div layout="row">-->
+            <!--<div class="md-visitor-hour" layout="row" flex>{{visit.fromHour}} AM</div>-->
+            <!--<div class="md-visitor-hour" layout="row" flex>{{visit.toHour}} AM</div>-->
+        <!--</div>-->
+        <md-grid-list class="md-hours-tiles" md-cols="1" md-gutter="0" md-row-height="30">
+            <md-grid-tile md-rowspan="1" md-colspan="1" style="background: pink;">
+                <div class="md-visitor-hour">
+                    {{visit.fromHour}} AM
+                </div>
+            </md-grid-tile>
+            <md-grid-tile md-rowspan="1" md-colspan="1" style="background: gold;">
+                <div class="md-visitor-costumer-name">
+                    {{visit.toHour}} AM
+                </div>
+            </md-grid-tile>
+        </md-grid-list>
+    </md-grid-tile>
+    <md-grid-tile md-rowspan="1" md-colspan="7" md-colspan-sm="3" md-colspan-md="5" style="">
+        <md-grid-list class="md-desc-tiles" md-cols="1" md-gutter="0" md-row-height="30">
+            <md-grid-tile md-rowspan="1" md-colspan="1" style="">
+                <div class="md-visitor-hour">
+                    {{visit.customerName}}
+                </div>
+            </md-grid-tile>
+            <md-grid-tile md-rowspan="1" md-colspan="1" style="">
+                <div class="md-visitor-costumer-name">
+                    {{visit.desciption}}
+                </div>
+            </md-grid-tile>
+        </md-grid-list>
+        <!--<div class="md-visitor-costumer-name" layout="column" flex>{{visit.customerName}}</div>-->
+        <!--<div class="md-visitor-desc" layout="column" flex>{{visit.desciption}}</div>-->
+    </md-grid-tile>
+    <md-grid-tile md-rowspan="1" md-colspan="2" md-colspan-sm="3" md-colspan-md="5" style="">
+        <div class="md-visitor-desc" layout="column" flex>{{visit.actualHours}}</div>
+    </md-grid-tile>
+</md-grid-list>
+
+<!--style="background: #60bdbe;"-->
+<!--style="background: #99bebd;"-->
+

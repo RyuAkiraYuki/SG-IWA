@@ -29,8 +29,13 @@ module WeeklyManagerApp {
                         self.isLogin = false;
                         var sgResponse:SGResponse = <SGResponse>response.data;
                         var sgData:SGData = sgResponse.Data;
-                        self.tabs = self.reportService.buildTabs(self.reportService.arrangeVisits(sgData.Data[0].Rows, sgData.Data[0].Columns));
-                        self.employee = self.reportService.getEmployee(sgData.Data[1].Rows, sgData.Data[1].Columns);
+                        self.tabs = self.reportService.buildTabs(self.reportService.arrangeVisits(
+                            _.findWhere(sgData.Data,{DataItemName:"PDI_VistsByLogin"}).Rows,
+                            _.findWhere(sgData.Data,{DataItemName:"PDI_VistsByLogin"}).Columns)
+                        );
+                        self.employee = self.reportService.getEmployee(
+                            _.findWhere(sgData.Data,{DataItemName:"PDI_EmpDetailByLogin"}).Rows,
+                            _.findWhere(sgData.Data,{DataItemName:"PDI_EmpDetailByLogin"}).Columns);
                         self.week = ['Mon', 'Tue', 'Wen', 'Thu', 'Fri'];
                     });
             } else {
@@ -59,8 +64,13 @@ module WeeklyManagerApp {
                             .then((response:any)=> {
                                     var sgResponse:SGResponse = <SGResponse>response.data;
                                     var sgData:SGData = sgResponse.Data;
-                                    self.tabs = self.reportService.buildTabs(self.reportService.arrangeVisits(sgData.Data[0].Rows, sgData.Data[0].Columns));
-                                    self.employee = self.reportService.getEmployee(sgData.Data[1].Rows, sgData.Data[1].Columns);
+                                    self.tabs = self.reportService.buildTabs(self.reportService.arrangeVisits(
+                                        _.findWhere(sgData.Data,{DataItemName:"PDI_VistsByLogin"}).Rows,
+                                        _.findWhere(sgData.Data,{DataItemName:"PDI_VistsByLogin"}).Columns)
+                                    );
+                                    self.employee = self.reportService.getEmployee(
+                                        _.findWhere(sgData.Data,{DataItemName:"PDI_EmpDetailByLogin"}).Rows,
+                                        _.findWhere(sgData.Data,{DataItemName:"PDI_EmpDetailByLogin"}).Columns);
                                     self.week = ['Mon', 'Tue', 'Wen', 'Thu', 'Fri'];
                                     self.isLogin = false;
                                 },

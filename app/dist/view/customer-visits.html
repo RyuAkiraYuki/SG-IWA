@@ -1,0 +1,38 @@
+<md-grid-list md-cols="12" md-gutter="1px" md-row-height="60" ng-repeat="visit in tab.visits | orderBy: 'fromHour'">
+    <md-grid-tile md-rowspan="1" md-colspan="3" md-colspan-sm="3" md-colspan-md="5" style="">
+        <md-grid-list class="md-hours-tiles" md-cols="1" md-gutter="0" md-row-height="20">
+            <md-grid-tile md-rowspan="1" md-colspan="1" style="">
+                <div class="md-visitor-hour">
+                    {{visit.fromHour.time}} <span>{{visit.fromHour.period}}</span>
+                </div>
+            </md-grid-tile>
+            <md-grid-tile md-rowspan="1" md-colspan="1" style="">
+                <div class="md-visitor-hour">
+                    {{visit.toHour.time}} <span>{{visit.toHour.period}}</span>
+                </div>
+            </md-grid-tile>
+        </md-grid-list>
+    </md-grid-tile>
+    <md-grid-tile md-rowspan="1" md-colspan="7" md-colspan-sm="3" md-colspan-md="5" style="">
+        <md-grid-list class="md-desc-tiles" md-cols="1" md-gutter="0" md-row-height="20">
+            <md-grid-tile md-rowspan="1" md-colspan="1" style="">
+                <div class="md-visitor-costumer-name">
+                    {{visit.customerName}}
+                </div>
+            </md-grid-tile>
+            <md-grid-tile md-rowspan="1" md-colspan="1" style="">
+                <div class="md-visitor-costumer-desc">
+                    {{visit.desciption}}
+                </div>
+            </md-grid-tile>
+        </md-grid-list>
+    </md-grid-tile>
+    <md-grid-tile md-rowspan="1" md-colspan="2" md-colspan-sm="3" md-colspan-md="5" style="">
+        <md-grid-list class="md-actual-hour" md-cols="1" md-gutter="0" md-row-height="20">
+            <md-grid-tile md-rowspan="1" md-colspan="1" style="">
+                <div class="md-visitor-hour" layout="column" flex> {{visit.actualHours}} <span class="sg-visitor-total-hours">hrs</span></div>
+            </md-grid-tile>
+        </md-grid-list>
+    </md-grid-tile>
+</md-grid-list>
+

@@ -1,0 +1,17 @@
+<div layout="column" ng-cloak>
+    <md-content class="">
+        <md-tabs layout-align="center start" class="el-tab" md-selected="vm.selectedIndex"
+                 md-border-bottom
+                 md-swipe-content
+                 md-no-pagination
+                 md-stretch-tabs>
+            <md-tab class="" ng-repeat="tab in vm.tabs"
+                    ng-disabled="tab.disabled">
+                <md-tab-label>{{tab.title}}<span class="sg-tab-lbl-sub-text" style="">{{vm.week[$index]}}</span></md-tab-label>
+                <md-tab-body>
+                    <md-content class="sg-tab-body" ng-include="'./dist/view/customer-visits.html'" flex></md-content>
+                </md-tab-body>
+            </md-tab>
+        </md-tabs>
+    </md-content>
+</div>

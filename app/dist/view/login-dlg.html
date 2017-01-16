@@ -1,0 +1,32 @@
+<md-dialog aria-label="Login"  ng-cloak>
+    <form>
+        <md-toolbar>
+            <div class="md-toolbar-tools">
+                <h2>Login</h2>
+                <span flex></span>
+                <md-button class="md-icon-button" ng-click="cancel($event)">
+                    <md-icon md-svg-src="./assets/svg/ic_close_24px.svg" aria-label="Close dialog"></md-icon>
+                </md-button>
+            </div>
+        </md-toolbar>
+        <md-dialog-content>
+            <div class="md-dialog-content">
+                <div layout-gt-sm="row">
+                    <md-input-container class="md-block" flex-gt-sm>
+                        <label>First name</label>
+                        <input ng-model="this.user.userName">
+                    </md-input-container>
+                    <md-input-container class="md-block" flex-gt-sm>
+                        <label>Last Name</label>
+                        <input ng-model="this.user.password" type="password">
+                    </md-input-container>
+                </div>
+            </div>
+        </md-dialog-content>
+        <md-dialog-actions layout="row">
+            <md-button ng-click="signIn($event,this)">
+                Login
+            </md-button>
+        </md-dialog-actions>
+    </form>
+</md-dialog>

@@ -40,7 +40,8 @@ module WeeklyManagerApp {
 
             this.$http({
                 method: 'POST',
-                url: "https://sgwin2012r2.skygiraffe.com/skygiraffeauthorizationserver/oauth2/token",
+                url: "https://skygiraffeauthorizationserver.skygiraffe.com/oauth2/token",
+                // url: "https://sgwin2012r2.skygiraffe.com/skygiraffeauthorizationserver/oauth2/token",
                 data: urlEncodedData,
                 headers: {
                     'Content-Type': 'application/x-www-form-urlencoded',
@@ -65,7 +66,8 @@ module WeeklyManagerApp {
             var deferred:IDeferred = self.$q.defer();
 
             var getReportUrl:string = "https://sgwin2012r2.skygiraffe.com/publisher/api/v1/Report";
-            var parametrizedReportUrl:string = "https://sgwin2012r2.skygiraffe.com/publisher/api/v1/ParameterizedReport";
+            var parametrizedReportUrl1:string = "https://sgwin2012r2.skygiraffe.com/publisher/api/v1/ParameterizedReport";
+            var parametrizedReportUrl:string = "https://publisher.skygiraffe.com/api/v1//ParameterizedReport";
 
             // Hard-coding data for the very specific report
             // --- | Igor app | ---
@@ -82,13 +84,17 @@ module WeeklyManagerApp {
             // "ApplicationID": "e652834c-8c0c-4fe5-9866-d884ae2e499c",
             // "ReportID": "8b2b910d-96c2-48fb-a786-1552cdbb8046",
             // "ParameterID": "92fbf42d-db49-42de-a60d-491aaa7b2f35",
+            // --- | johnsmith app | ---
+            // "ApplicationID": "63446f9a-ab3b-421f-afb4-2d80eb69927a",
+            // "ReportID": "37aedafd-d410-4223-835c-5684831db0e4",
+            // "ParameterID": "3cf9db4e-7534-41be-86a6-78623f82f238",
 
             let parametrizedData = {
-                "ApplicationID": "5dacf67f-9c4b-4fb3-b970-287f88d6d9b6",
-                "ReportID": "57994188-bffb-4054-8696-e02f43f090cf",
+                "ApplicationID": "63446f9a-ab3b-421f-afb4-2d80eb69927a",
+                "ReportID": "37aedafd-d410-4223-835c-5684831db0e4",
                 "TabID": null,
                 "Parameters": [{
-                    "ParameterID": "04a5579a-545e-432e-b7f3-d02cd0fb0581",
+                    "ParameterID": "3cf9db4e-7534-41be-86a6-78623f82f238",
                     "ParameterLabel": "@login",
                     "ValueID": "",
                     "ValueLabel": ""
