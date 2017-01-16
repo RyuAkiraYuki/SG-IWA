@@ -27,29 +27,23 @@ html, body {
 
 md-avatar-circle {
     position: relative;
-    margin: 0 auto;
+    margin: 30px 0 0 20px;
     border-radius: 50%;
-    margin-top: 30px;
-    border: 3px solid #60bdbe;
-    width: 144px;
-    height: 144px;
+    border: 2px solid #60bdbe;
+    width: 92px;
+    height: 92px;
 }
 
 md-avatar-circle img {
     position: relative;
-    width: 118px;
-    height: 118px;
-    /*border: 1px solid #ddd;*/
+    width: 78px;
+    height: 78px;
     border-radius: 50%;
     display: inline-block;
     overflow: hidden;
     margin: 0 auto;
     vertical-align: middle;
-    padding: 13px;
-    /*zoom: .70;*/
-    /*transform: translateZ(0);*/
-    /*-webkit-transform: translateZ(0.70);*/
-    /*-moz-transform: translateZ(0.70);*/
+    padding: 7px;
 }
 
 .avatar {
