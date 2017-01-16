@@ -1,0 +1,248 @@
+html, body {
+    font-family: "Avenir Next LT Pro Regular", 'Ave', sans-serif;
+    font-size: 14px;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.weeklyManagerApp md-tabs-canvas {
+    background: #f3f3f3;
+}
+
+.weeklyManagerApp .el-tab {
+    /*min-height: 80vh !important;*/
+}
+
+.weeklyManagerApp .visits-tab-itm {
+    padding: 0 10px;
+}
+
+.weeklyManagerApp .visit-item {
+    border-bottom: 1px solid #d8d8d8;
+    padding-left: 0;
+    padding-right: 0;
+    margin-bottom: 5px;
+}
+
+md-avatar-circle {
+    position: relative;
+    margin: 0 auto;
+    border-radius: 50%;
+    margin-top: 30px;
+    border: 3px solid #60bdbe;
+    width: 144px;
+    height: 144px;
+}
+
+md-avatar-circle img {
+    position: relative;
+    width: 118px;
+    height: 118px;
+    /*border: 1px solid #ddd;*/
+    border-radius: 50%;
+    display: inline-block;
+    overflow: hidden;
+    margin: 0 auto;
+    vertical-align: middle;
+    padding: 13px;
+    /*zoom: .70;*/
+    /*transform: translateZ(0);*/
+    /*-webkit-transform: translateZ(0.70);*/
+    /*-moz-transform: translateZ(0.70);*/
+}
+
+.avatar {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    border: 1px solid #ddd;
+    border-radius: 50%;
+    display: inline-block;
+    overflow: hidden;
+    margin: 0 auto;
+    vertical-align: middle;
+    zoom: .70;
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0.70);
+    -moz-transform: translateZ(0.70);
+}
+
+.weeklyManagerApp .md-visitor-hour {
+    color: #9d9d9d;
+    font-size: 15px;
+    color: #5e5e5e;
+    font-family: 'Oswald-Light';
+}
+
+.weeklyManagerApp .md-visitor-hour > span {
+    display: inline;
+    font-size: 10px;
+    font-family: 'Oswald-Light';
+}
+
+.weeklyManagerApp .md-visitor-desc {
+    color: #b0b0b0;
+}
+
+md-tabs.md-default-theme md-ink-bar,
+md-tabs md-ink-bar {
+    color: #6cc2c3;
+    background: #6cc2c3;
+}
+
+md-tabs.md-default-theme .md-tab.md-active,
+md-tabs .md-tab.md-active,
+md-tabs.md-default-theme .md-tab.md-active md-icon,
+md-tabs .md-tab.md-active md-icon,
+md-tabs.md-default-theme .md-tab.md-focused,
+md-tabs .md-tab.md-focused,
+md-tabs.md-default-theme .md-tab.md-focused md-icon,
+md-tabs .md-tab.md-focused md-icon {
+    color: #7c7dbc;
+}
+
+md-tabs:not(.md-no-tab-content):not(.md-dynamic-height) {
+    /*min-height: 92vh !important;*/
+    min-height: 290px !important;
+}
+
+.weeklyManagerApp .md-employee {
+    color: #5d5d5d;
+    margin-top: 10px;
+    margin-bottom: 0;
+    font-size: 21px;
+    font-family: 'Avenir Next LT Pro Demi';
+}
+
+.weeklyManagerApp .md-job-title {
+    color: #a0a0a0;
+    margin-top: 0;
+    margin-bottom: 7px;
+    font-family: 'Avenir Next LT Pro Regular';
+}
+
+.weeklyManagerApp .md-employee-info {
+    text-align: center;
+}
+
+md-grid-tile {
+    border-bottom: 1px solid #d8d8d8;
+    text-align: left;
+}
+
+.weeklyManagerApp .month-line {
+    background: #f3f3f3;
+    text-align: center;
+    padding-top: 9px;
+    color: #8a8bc1;
+    font-size: 14px;
+}
+
+.weeklyManagerApp .md-hours-tiles md-grid-tile > figure {
+    top: auto;
+    left: -33px;
+    right: auto;
+    bottom: auto;
+}
+
+.weeklyManagerApp .md-desc-tiles md-grid-tile > figure {
+    top: auto;
+    left: -23vw;
+    right: auto;
+    bottom: auto;
+}
+
+.weeklyManagerApp .md-actual-hour md-grid-tile > figure {
+    top: auto;
+    left: -13px;
+    right: auto;
+    bottom: auto;
+}
+
+.weeklyManagerApp .md-hours-tiles md-grid-tile > figure div {
+    /*width: 100px;*/
+    width: 18vw;
+}
+
+.weeklyManagerApp .md-desc-tiles md-grid-tile > figure div {
+    /*width: 100px;*/
+    width: 50vw;
+}
+
+.weeklyManagerApp .md-actual-hour md-grid-tile > figure div {
+    /*width: 100px;*/
+    width: 11vw;
+
+}
+
+.weeklyManagerApp .md-actual-hour md-grid-tile > figure div.md-visitor-hour {
+    display: inline;
+}
+
+.weeklyManagerApp .md-tab {
+    font-size: 20px;
+    font-family: 'Avenir Next LT Pro Regular';
+}
+
+md-decor {
+    display: block;
+    background: #90d1d1;
+    width: 15px;
+    height: 4px;
+    margin: 0 auto;
+
+    margin-bottom: 35px;
+}
+
+.el-tab md-pagination-wrapper {
+    height: 55px;
+}
+
+.el-tab md-tabs-canvas {
+    height: 55px;
+}
+
+.el-tab .sg-tab-lbl-sub-text {
+    font-size: 14px;
+    display: block;
+    line-height: 10px;
+    font-family: "Consolas-Regular2";
+    /*font-family: "Avenir Next LT Pro Regular", 'Ave', sans-serif;*/
+    text-transform: capitalize;
+}
+
+.el-tab md-tabs-content-wrapper {
+    top: 56px !important;
+}
+
+.md-tabs-centered-wrapper {
+    display: flex;
+    justify-content: center;
+    height: 4.8rem;
+    margin: auto;
+}
+
+.md-tabs-centered-wrapper md-tabs[md-stretch-tabs] {
+    max-width: 50% !important; /* or any */
+}
+
+.weeklyManagerApp .hidden {
+    display: none !important;
+}
+
+.hidden-tab-labels md-tabs-canvas {
+    display: none !important;
+}
+
+.custom-color {
+    background: lightslategray;
+}
+
+.weeklyManagerApp md-tabs[md-align-tabs=bottom] md-tabs-content-wrapper {
+    bottom: 0;
+}
+
+md-tabs:not(.md-no-tab-content):not(.md-dynamic-height).hidden-tab-labels {
+    min-height: 92.5vh !important;
+}

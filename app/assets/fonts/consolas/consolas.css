@@ -1,0 +1,41 @@
+@font-face {
+    font-family: 'Consolas-Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Consolas-Regular'), url('consola.ttf') format('ttf');
+}
+
+@font-face {
+    font-family: 'Consolas-Bold';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Consolas-Bold'), url('consolab.ttf') format('ttf');
+}
+
+@font-face {
+    font-family: 'Consolas-Bold2';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Consolas-Bold2'), url('Consolas-Bold.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Consolas-Regular2';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Consolas-Bold2'), url('Consolas-Bold.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Consolas-Italic';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Consolas-Italic'), url('consolai.ttf') format('ttf');
+}
+
+@font-face {
+    font-family: 'Consolas-Bold-Italic';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Consolas-Light'), url('consolaz.ttf') format('ttf');
+}

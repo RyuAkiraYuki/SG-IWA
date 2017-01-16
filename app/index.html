@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="weeklyManagerApp">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-COMPATIBLE" content="IE=edge">
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1,user-scalable=no">
+        <title>SGMobile WebMaterials</title>
+        <link rel="stylesheet" href="./bower_components/angular-material/angular-material.min.css">
+        <link rel="stylesheet" href="./bower_components/angular-material-icons/angular-material-icons.css">
+        <link rel="stylesheet" href="./assets/fonts/avenir/avenir.css">
+        <link rel="stylesheet" href="./assets/fonts/consolas/consolas.css">
+        <link rel="stylesheet" href="./assets/fonts/oswald/oswald.css">
+        <link rel="stylesheet" href="./assets/app.css">
+        <style>
+            [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+                display: none !important;
+            }
+        </style>
+    </head>
+    <body class="weeklyManagerApp" ng-cloak ng-controller="mainController as vm" layout="row">
+
+        <div layout="row" flex ng-class="{hidden:vm.isLogin}">
+
+            <div layout="column" flex>
+                <!--<button ng-click="vm.showAlert($event)" layout="row">A BUTTON</button>-->
+                <md-avatar-circle>
+                    <img ng-src="./assets/img/{{vm.employee.IMG_Url}}" alt=""/>
+                </md-avatar-circle>
+                <md-content class="md-employee-info">
+                    <h3 class="md-employee">{{vm.employee.Employee_Name}}</h3>
+                    <h4 class="md-job-title">{{vm.employee.Employee_Title}}</h4>
+                    <md-decor></md-decor>
+                </md-content>
+                <md-content class="month-line">{{vm.thisMonth}}</md-content>
+                <div ng-include="'./dist/view/content.html'" layout="column" flex></div>
+            </div>
+        </div>
+
+        <div layout="row" flex ng-class="{hidden:!vm.isLogin}">
+            <div ng-include="'./dist/view/login-form.html'" layout="column" flex></div>
+        </div>
+
+
+        <script src="./bower_components/angular/angular.min.js"></script>
+        <script src="./bower_components/jquery/dist/jquery.min.js"></script>
+        <script src="./bower_components/moment/min/moment.min.js"></script>
+        <script src="./bower_components/underscore/underscore-min.js"></script>
+        <script src="./bower_components/angular-route/angular-route.min.js"></script>
+        <script src="./bower_components/angular-animate/angular-animate.min.js"></script>
+        <script src="./bower_components/angular-aria/angular-aria.min.js"></script>
+        <script src="./bower_components/angular-material/angular-material.min.js"></script>
+        <script src="./bower_components/angular-material-icons/angular-material-icons.min.js"></script>
+
+        <script src="./dist/models/models.js"></script>
+        <script src="./dist/models/sgModels.js"></script>
+        <script src="./dist/controllers/mainController.js"></script>
+        <script src="./dist/services/tabService.js"></script>
+        <script src="./dist/services/reportService.js"></script>
+        <script src="./dist/app.js"></script>
+    </body>
+</html>

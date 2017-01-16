@@ -1,0 +1,29 @@
+{
+  "name": "WeeklyManagerAngularMaterialsApp",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "Igor Alhasov (aka Ryu Akira Kenshin Yuki)"
+  ],
+  "license": "Paid",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "angular-material": "^1.0.9"
+  },
+  "dependencies": {
+    "angular-material-icons": "^0.7.1",
+    "angular-ui-router": "^0.3.1",
+    "angular-route": "^1.5.8",
+    "jquery": "^3.1.0",
+    "underscore": "^1.8.3",
+    "moment": "^2.14.1"
+  }
+}
